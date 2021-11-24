@@ -1,51 +1,39 @@
-$(function(){
-// window.addEventListener("load", function(){
 
-    // $('.header__btn').on('click', function(){
-    //     $('.menu').toggleClass('menu--active');
-    //     $('.header__btn-item').toggleClass('header__btn-item--active');
-    // });
 
-    let headerItems = document.querySelectorAll('.header__btn-item');
-    document.querySelector('.header__btn').addEventListener('click', function(){
-        document.querySelector('.menu').classList.toggle('menu--active');
-        headerItems.forEach(elem => {
-            elem.classList.toggle('header__btn-item--active');
-        });
-    });
+function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+    return {
+        total,
+        days,
+        hours,
+        minutes,
+        seconds
+    };
+}
 
-    window.addEventListener('scroll', function(){
-        if(window.scrollY >= 100) {
-            document.querySelector('.header').classList.add('header--active');
-            document.querySelector('.home-page__title').classList.add('home-page__title--outLeft');
-            document.querySelector('.home-page__name').classList.add('home-page__name--outLeft');
-            document.querySelector('.home-page__link').classList.add('home-page__link--outLeft');
+function initializeClock(id, endtime) {
+    const clock = document.querySelector('.' + id);
+    const daysSpan = clock.querySelector('.clock-sale__days');
+    const hoursSpan = clock.querySelector('.clock-sale__hours');
+    const minutesSpan = clock.querySelector('.clock-sale__minutes');
+    const secondsSpan = clock.querySelector('.clock-sale__seconds');
+
+    function updateClock() {
+        const t = getTimeRemaining(endtime);
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
         }
-        else {
-            document.querySelector('.header').classList.remove('header--active');
-            document.querySelector('.home-page__title').classList.remove('home-page__title--outLeft');
-            document.querySelector('.home-page__name').classList.remove('home-page__name--outLeft');
-            document.querySelector('.home-page__link').classList.remove('home-page__link--outLeft');
-        }
-    });
-
-    const anim = ['html', 'css', 'js', 'sass', 'gulp', 'git', 'jquery', 'figma'];
-    anim.forEach(id =>
-        new Vivus(id, {
-            duration: 300,
-            type: 'delayed'
-        })
-    );
-
-    $('.menu__link, .logo, .home-page__link').on('click', function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href');
-        var top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-
-        $('.menu').removeClass('menu--active');
-        $('.header__btn-item').removeClass('header__btn-item--active');
-    });
-
-    new WOW().init();
-});
+    }
+    updateClock();
+    const timeinterval = setInterval(updateClock, 1000);
+}
+const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clock-sale', deadline);

@@ -1,89 +1,89 @@
-// .visually-hidden {
-//     position: absolute !important;
-//     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-//     clip: rect(1px, 1px, 1px, 1px);
-//     padding:0 !important;
-//     border:0 !important;
-//     height: 1px !important; 
-//     width: 1px !important; 
-//     overflow: hidden;
-// }
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
 
-// html,
-// body {
-//     height: 100%;
-// }
+html,
+body {
+    height: 100%;
+}
 
-// .main {
-//     flex-grow: 1;
-// }
+.main {
+    flex-grow: 1;
+}
 
-// body {
-//     font-family: $Montserrat;
-//     font-weight: $fw400;
-//     background-color: #000;
-//     font-size: 16px;
-//     line-height: 1.5;
-//     color: #fff;
-//     display: flex;
-//     flex-direction: column;
-//     @include max($lg) {
-//         line-height: 1.5;
-//         font-size: 16px;
-//     }
-// }
+body {
+    font-family: $Gilroy;
+    font-weight: 600;
+    background-color: #f4f9fc;
+    font-size: 18px;
+    line-height: 1.3;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    @include max($lg) {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
 
-// .container {
-//     max-width: 1200px;
-//     padding: 0 15px;
-//     margin: 0 auto;
-//     @include max($sm) {
-//         padding: 0 5px;
-//     }
-//     &--fluid {
-//         @include max($sm) {
-//             padding: 0 10px;
-//         }
-//     }
-// }
+.container {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+    &--fluid {
+        max-width: 1900px;
+        padding: 0 15px;
+    }
+    @include max($sm) {
+        padding: 0 5px;
+    }
+}
 
-// .title {
-//     position: relative;
-//     text-align: center;
-//     margin-left: -41px; 
-//     margin-right: -41px;
-//     padding: 15px 30px;
-//     background-color: #1d283c;
-//     font-size: 32px;
-//     font-family: $Ubuntu;
-//     font-weight: $fw700;
-//     color: #fff;
-//     letter-spacing: 5px;
-//     &::after {
-//         position: absolute;
-//         left: 0;
-//         bottom: -10px;
-//         content:'';
-//         border-top: 10px solid #090f1b;
-//         border-left: 10px solid transparent;
-//     }
-//     &::before {
-//         position: absolute;
-//         right: 0;
-//         bottom: -10px;
-//         content:'';
-//         border-top: 10px solid #090f1b;
-//         border-right: 10px solid transparent;
-//     }
-//     @include max($lg) {
-//         padding: 10px 30px;
-//         margin-left: -31px; 
-//         margin-right: -31px;
-//     }
-//     @include max($sm) {
-//         margin-left: -16px; 
-//         margin-right: -16px;
-//         font-size: 23px;
-//         padding: 5px 30px;
-//     }
-// }
+.title {
+    font-size: 56px;
+    font-family: 700;
+    line-height: 1;
+    font-family: $BebasNeueBold;
+}
+
+.text {
+    font-family: 400;
+    color: $grey;
+    @include lineClamp;
+    -webkit-line-clamp: 3;
+}
+
+.btn {
+    outline: transparent;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 18px 30px;
+    border: none;
+    color: #fff;
+    background-color: $red;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: $Montserrat;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    &:hover {
+        background-color: rgba($red, 0.7);
+    }
+    &:focus {
+        background-color: rgba($red, 0.5);
+    }
+    &:active {
+        background-color: $red;
+        color: $grey;
+    }
+}
+
+// @include lineClamp;
+// -webkit-line-clamp: 1;

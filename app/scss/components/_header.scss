@@ -1,0 +1,153 @@
+.header {
+    position: fixed;
+    background-color: #f4f9fc;
+    width: 100%;
+    z-index: 15;
+    top: 0;
+    &__inner {
+        padding: 30px 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__map {
+        margin-right: 45px;
+        position: relative;
+        padding-left: 44px;
+        font-weight: 400;
+        font-family: $Montserrat;
+        &::after {
+            width: 24px;
+            position: absolute;
+            content: '';
+            height: 29px;
+            left: 0;
+            top: 0;
+            @include bg;
+            background-image: url(../images/icons/map.svg);
+        }
+    }
+    &__text {
+        font-size: 14px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__link {
+        font-size: 12px;
+        outline: transparent;
+        color: $blue;
+        text-decoration-line: underline;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $grey;
+        }
+        &:focus {
+            color: $black;
+        }
+        &:active {
+            color: $red;
+        }
+    }
+    &__tel {
+        font-size: 20px;
+        color: #000;
+        position: relative;
+        outline: transparent;
+        margin-right: 35px;
+        &--first {
+            padding-right: 18px;
+            margin-right: 9px;
+            &::after {
+                position: absolute;
+                content: '/';
+                color: $grey;
+                right: 0;
+            }
+        }
+        &:hover {
+            color: $red;
+        }
+        &:focus {
+            color: $black;
+        }
+        &:active {
+            color: $grey;
+        }
+    }
+    &__tel-icon {
+        outline: transparent;
+        width: 48px;
+        height: 48px;
+        background: rgba(226, 0, 26, 0.1);
+        border-radius: 15px;
+        display: flex;
+        &:hover .header__icon{
+            fill: $grey;
+        }
+        &:focus .header__icon{
+            fill: $black;
+        }
+        &:active .header__icon{
+            fill: #000;
+        }
+    }
+    &__icon {
+        margin: auto;
+        width: 16px;
+        height: 16px;
+        fill: $red;
+        transition: fill 0.3s ease-in;
+    }
+}
+
+.logo {
+    display: block;
+    outline: transparent;
+    margin-right: 80px;
+    &__images {
+        width: 202px;
+        height: 70px;
+    }
+}
+
+.menu {
+    margin-right: auto;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+    &__link {
+        outline: transparent;
+        font-size: 16px;
+        transition: color 0.3s ease-in;
+        position: relative;
+        padding-bottom: 23px;
+        &::after {
+            position: absolute;
+            height: 2px;
+            content: '';
+            width: 0;
+            background-color: $red;
+            transition:  background-color 0.3s ease-in, width 0.3s ease-in;
+            left: 0;
+            bottom: 0;
+        }
+        &:hover {
+            color: $red;
+        }
+        &:focus {
+            color: $black;
+        }
+        &:active {
+            color: $grey;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}

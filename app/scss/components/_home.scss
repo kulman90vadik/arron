@@ -1,0 +1,134 @@
+.home {
+    position: relative;
+    &__inner {
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        max-width: 625px; 
+        width: 100%;
+    }
+    &__title {
+        font-size: 110px;
+        line-height: 0.9;
+        position: relative;
+        letter-spacing: -0.01em;
+        margin-bottom: 10px;
+        @include lineClamp;
+        -webkit-line-clamp: 3;
+        &::after {
+            position: absolute;
+            content: '';
+            @include bg;
+            background-image: url(../images/arrow-decor.svg);
+            width: 88px;
+            height: 13px;
+            top: 35px;
+            right: 22px;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        max-width: 405px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        @include bg;
+    }
+    &::after {
+        left: 40px;
+        bottom: 40px;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/ellipse-decor.svg);
+    }
+    &::before {
+        width: 56px;
+        height: 56px;
+        right: 60px;
+        bottom: 77px;
+        background-image: url(../images/dots-decor.svg);
+    }
+}
+
+
+
+.sale {
+    position: relative;
+    padding: 70px 25px 30px;
+    max-width: 264px; 
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 71px 80px rgba(255, 107, 0, 0.11), 0 21.4044px 24.1177px rgba(255, 107, 0, 0.0716748), 0px 8.8903px 10.0172px rgba(255, 107, 0, 0.055), 0 3.21545px 3.62304px rgba(255, 107, 0, 0.0383252);
+    border-radius: 30px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 32px;
+        @include bg;
+        background-image: url(../images/fire.svg);
+        right: 30px;
+        top: 15px;
+    }
+    &__number {
+        position: absolute;
+        left: 30px;
+        top: -40px;
+        color: $orange;
+        font-weight: 700;
+        font-size: 113.007px;
+        line-height: 113px;
+        letter-spacing: -0.01em;
+        font-family: $BebasNeueBold;
+        text-shadow: 0 100px 80px rgba(255, 107, 0, 0.11), 0 46.233px 36.9864px rgba(255, 107, 0, 0.0815843), 0 26.4535px 21.1628px rgba(255, 107, 0, 0.0689459), 0 16.0571px 12.8457px rgba(255, 107, 0, 0.0593943), 0 9.67509px 7.74008px rgba(255, 107, 0, 0.0506057), 0 5.38772px 4.31018px rgba(255, 107, 0, 0.0410541), 0 2.31722px 1.85378px rgba(255, 107, 0, 0.0284157);
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 44px;
+        span {
+            font-weight: 700;
+        }
+    }
+    &__head {
+        margin-bottom: 6px;
+        display: block;
+        color: rgba($black, 0.5);
+    }
+}
+
+.clock-sale {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        font-weight: 600;
+        font-size: 32px;
+        position: relative;
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                content: ':';
+                right: -15px;
+                top: -3px;
+            }
+        }
+    }
+    &__time {
+        margin-bottom: 4px;
+        display: block;
+    }
+    &__smalltext {
+        font-size: 11px;
+        color: rgba($black, 0.5);
+    }
+}
