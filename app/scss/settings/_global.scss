@@ -51,10 +51,10 @@ body {
     font-family: 700;
     line-height: 1;
     font-family: $BebasNeueBold;
-}
+}    
 
 .text {
-    font-family: 400;
+    font-weight: 400;
     color: $grey;
     @include lineClamp;
     -webkit-line-clamp: 3;

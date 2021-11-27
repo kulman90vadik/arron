@@ -1,0 +1,41 @@
+.order  {
+    position: relative;
+    margin-bottom: 66px;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__title {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            @include bg;
+            width: 88px;
+            height: 13px;
+            right: -144px;
+            background-image: url(../images/arrow-decor.svg);
+        }
+    }
+    & .order-slider {
+        & .slider__slide {
+            max-width: 412px;
+            width: 100%;
+            height: 401px;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        @include bg;
+        background-image: url(../images/dots-decor.svg);
+        width: 56px;
+        height: 56px;
+        bottom: 0;
+        right: 23%;
+    }
+}

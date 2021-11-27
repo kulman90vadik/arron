@@ -1,0 +1,79 @@
+.about {
+    margin-bottom: 120px;
+    position: relative;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        max-width: 340px;
+        width: 100%;
+        margin-right: 25px;
+    }
+    &__title {
+        font-size: 80px;
+        position: relative;
+        margin-bottom: 24px;
+        &::after {
+            position: absolute;
+            content: '';
+            @include bg;
+            background-image: url(../images/arrow-decor.svg);
+            width: 88px;
+            height: 13px;
+            bottom: 40px;
+            right: 22px;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        margin-bottom: 64px;
+    }
+    &__btn {
+        padding: 18px 70px 18px 30px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 9px 0 9px 14px;
+            border-color: transparent transparent transparent #fff;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 23px;
+            transition: border-color 0.3s ease-in;
+        }
+        &:active::after {
+            border-color: transparent transparent transparent $grey;
+        }
+    }
+
+    & .servises {
+        margin-bottom: 0;
+    }
+    & .servises__list {
+        max-width: 800px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    & .servises__item:not(:last-child) {
+        margin-right: 0;
+    }
+    & .servises__item--courier,
+    & .servises__item--work {
+        margin-bottom: 55px;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        @include bg;
+        width: 98px;
+        height: 62px;
+        bottom: 65px;
+        right: 65px;
+        background-image: url(../images/wawe.svg);
+    }
+}

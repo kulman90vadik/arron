@@ -1,0 +1,72 @@
+.service {
+    margin-bottom: 122px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-bottom: 5px;
+        font-size: 48px;
+        @include lineClamp;
+        -webkit-line-clamp: 3;
+    }
+    &__text {
+        position: relative;
+        padding: 7px 0 7px 45px;
+        max-width: 320px;
+        width: 100%;
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 35px;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            background-image: url(../images/check.svg);
+            @include bg;
+            width: 35px;
+            height: 45px;
+            top: 2px;
+        }
+    }
+    &__left {
+        margin-right: 22px;
+        max-width: 430px;
+        width: 100%;
+    }
+    &__right {
+        max-width: 670px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__holder {
+        margin-right: 11px;
+    }
+    &__subtitle {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    &__item {
+        position: relative;
+        @include lineClamp;
+        -webkit-line-clamp: 3;
+        font-weight: 400;
+        color: $grey;
+        font-family: $Montserrat;
+        padding-left: 22px;
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $red;
+            left: 0;
+            top: 6px;
+        }
+    }
+}

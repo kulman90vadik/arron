@@ -36,6 +36,21 @@
                 background-image: url(../images/concern.svg);
             }
         }
+        &--work {
+            &::after {
+                background-image: url(../images/work.svg);
+            }
+        }
+        &--card {
+            &::after {
+                background-image: url(../images/card.svg);
+            }
+        }
+        &--warranty {
+            &::after {
+                background-image: url(../images/warranty.svg);
+            }
+        }
     }
     &__name {
         display: block;
