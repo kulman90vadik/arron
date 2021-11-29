@@ -69,6 +69,36 @@
             width: 202px;
             height: 266px;        
         }
+        &--covers {
+            max-width: 256px;
+            height: 257px;
+            left: 28px;
+            top: -40px;     
+        }
+        &--glass {
+            max-width: 256px;
+            height: 257px;
+            left: 28px;
+            top: -40px;     
+        }
+        &--cable {
+            max-width: 256px;
+            height: 218px;
+            left: 23px;
+            top: 28px;  
+        }
+        &--car {
+            max-width: 258px;
+            height: 216px;
+            left: 26px;
+            top: 14px;
+        }
+        &--battery {
+            max-width: 245px;
+            height: 155px;
+            left: 33px;
+            top: 47px;
+        }
     }
     &__small {
         position: absolute;
@@ -160,8 +190,8 @@
     &--woth {
         &::after {
             background-image: url(../images/wawe.svg);
-            top: 20px;
-            left: 12px;
+            width: 98px;
+            height: 62px;
             top: 5px;
             left: 20px;
         }
@@ -198,7 +228,11 @@
         }
     }
     &--pc,
-    &--idr {
+    &--idr,
+    &--covers,
+    &--glass,
+    &--cable,
+    &--car {
         &::before {
             position: absolute;
             content: '';
@@ -233,5 +267,81 @@
             right: 50px;
             transform: rotate(45deg);
         }
+    }
+
+
+    &--covers {
+        &::after {
+            background-image: url(../images/wawe.svg);
+            width: 98px;
+            height: 62px;
+            top: 26px;
+            left: 54px;
+        }
+    }
+    &--covers {
+        &::before {
+            background-image: url(../images/grey-decor.svg);
+            width: 47px;
+            height: 53px;
+            top: 107px;
+            right: 70px;
+        }
+    }
+    &--glass {
+        &::before {
+            background-image: url(../images/ellipse-decor.svg);
+            width: 67px;
+            height: 67px;
+            top: 84px;
+            right: 40px;
+        }
+    }
+    &--glass {
+        &::after {
+            background-image: url(../images/polygon.svg);
+            width: 53px;
+            height: 50px;
+            top: 30px;
+            left: 45px;
+        }
+    }
+    &--cable {
+        &::before {
+            background-image: url(../images/arrow-decor.svg);
+            width: 95px;
+            height: 14px;
+            top: 78px;
+            left: 42px;
+        }
+    }
+    &--cable {
+        &::after {
+            background-image: url(../images/polygon.svg);
+            width: 53px;
+            height: 50px;
+            top: 30px;
+            right: 35px;
+        }
+    }
+    &--car {
+        &::before {
+            background-image: url(../images/wawe.svg);
+            width: 98px;
+            height: 62px;
+            top: 26px;
+            right: 5px;
+        }
+    }
+
+
+    &__links {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 4;
     }
 }

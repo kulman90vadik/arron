@@ -355,12 +355,252 @@
         </div>
     </div>
 </section>
+        <section class="repair">
+    <div class="container">
+        <div class="repair__head">
+            <h2 class="title repair__title">На каждый ремонт гарантировано подарок на ваш выбор:</h2>
+            <div class="buttons repair__buttons">
+                <button class="buttons__btn repair__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn repair__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="slider repair-slider">
+            <ul class="slider__wrapper">
+                <li class="slider__slide">
+                    <article class="card card--covers">
+                        <div class="card__block"></div>
+                        <a class="card__links" href="#" aria-label="Переход на страницу товара"></a>
+                        <img  class="card__images card__images--covers" src="images/repair-1.png" alt="чехол для телефона">
+                        <span class="card__name">Чехлы</span>
+                    </article>
+                </li>
+                <li class="slider__slide">
+                    <article class="card card--glass">
+                        <div class="card__block"></div>
+                        <a class="card__links" href="#" aria-label="Переход на страницу товара"></a>
+                        <img  class="card__images card__images--glass" src="images/repair-2.png" alt="чехол для телефона">
+                        <span class="card__name">Защитные стёкла</span>
+                    </article>
+                </li>
+                <li class="slider__slide">
+                    <article class="card card--cable">
+                        <div class="card__block"></div>
+                        <a class="card__links" href="#" aria-label="Переход на страницу товара"></a>
+                        <img  class="card__images card__images--cable" src="images/repair-3.png" alt="чехол для телефона">
+                        <span class="card__name">Кабели</span>
+                    </article>
+                </li>
+                
+                <li class="slider__slide">
+                    <article class="card card--car">
+                        <div class="card__block"></div>
+                        <a class="card__links" href="#" aria-label="Переход на страницу товара"></a>
+                        <img  class="card__images card__images--car" src="images/repair-4.png" alt="чехол для телефона">
+                        <span class="card__name">Car holder</span>
+                    </article>
+                </li>
+                <li class="slider__slide">
+                    <article class="card">
+                        <div class="card__block"></div>
+                        <a class="card__links" href="#" aria-label="Переход на страницу товара"></a>
+                        <img  class="card__images card__images--battery" src="images/repair-5.png" alt="чехол для телефона">
+                        <span class="card__name">Зарядки</span>
+                    </article>
+                </li>
+                
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+
+        <div class="work">
+    <div class="container">
+        <blockquote class="work__blockquote">
+            В нашей компании работают лучшие специалисты, которые прекрасно разбираются в современных технологиях и имеют более 3-х лет опыта работы.
+        </blockquote>
+        <div class="work__inner">
+            <div class="work__info">
+                <p class="work__text text">
+                    За счет этого мы гарантируем устранение любых неполадок и предоставляем гарантию на все выполненные работы.
+                </p>
+                <p class="work__text text">
+                    Мы поможем не только восстановить работоспособность техники, но и подскажем, как избежать возникновения подобных поломок в будущем.
+                </p>
+                <p class="work__text text">
+                    Квалифицированная консультация специалиста поможет безопасно пользоваться компьютером. В нашем штате работают опытные специалисты.
+                </p>
+            </div>
+            <div class="slides">
+                <div class="work-slider">
+                    <ul class="work-slider__wrapper">
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class="buttons__btn work-slider__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn work-slider__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+        <section class="record">
+    <div class="container">
+        <div class="record__inner">
+            <h2 class="record__title title">Записаться на диагностику 
+                в <mark>удобное</mark> вам время</h2>
+            <form class="record__form" action="#">
+                <label class="visually-hidden" for="day">Текстовое поле для ввода дня</label>
+                <input class="record__input" type="text" name="day" id="day" placeholder="День">
+                <label class="visually-hidden" for="time">Текстовое поле для ввода время</label>
+                <input class="record__input" type="text" name="time" id="time" placeholder="Время">
+                <label class="visually-hidden" for="tel">Текстовое поле для ввода дня</label>
+                <input class="record__input record__input--tel" type="tel" name="tel" id="tel" placeholder="Телефон">
+                <button class="record__btn btn" type="submit">Записаться</button>
+            </form>
+            <div class="record__sale">50%</div>    
+        </div>
+    </div>
+</section>
+        <section class="contact">
+    <div class="container">
+        <h2 class="contact__title title">Наши контакты</h2>
+        <div class="contact__inner">
+            <div class="slides-contact">
+                <div class="slides-contact__slider">
+                    <ul class="slides-contact__wrapper">
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class="buttons__btn slides-contact__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn slides-contact__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+            <a class="contact__popup" href="#" style="background-image: url(images/popup.jpg);">
+                <button class="contact__btn" type="button" aria-label="Запуск видео отзыва"></button>
+            </a>
+        </div>
+        
+        <address class="contact-address">
+            <ul class="contact-address__top">
+                <li class="contact-address__item contact-address__item--tel">
+                    <a class="contact-address__link" href="tel:069827738">069 82 77 38</a> /  
+                    <a class="contact-address__link" href="tel:079927738">079 92 77 38</a>
+                </li>
+                <li class="contact-address__item contact-address__item--email">
+                    <a class="contact-address__link" href="mailto:info@arron.md">info@arron.md</a>
+                </li>
+                <li class="contact-address__item contact-address__item--map">
+                    <a class="contact-address__link" href="#">г. Кишинев, ул. Бэнулеску Бодони, д.33</a>
+                </li>
+            </ul>
+            <div class="contact-address__bottom">
+                <div class="contact-address__rating">
+                    <span class="contact-address__name">Рейтинг сервиса</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-5">
+                            <label class="rating__label" for="rating-5"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-4" checked>
+                            <label class="rating__label" for="rating-4"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-3">
+                            <label class="rating__label" for="rating-3"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-2">
+                            <label class="rating__label" for="rating-2"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-1">
+                            <label class="rating__label" for="rating-1"></label>
+                        </div>
+                    </div>
+                    <span class="rating__descr">4/5.0 - 403 голоса</span>
+                </div>
+                <div class="contact-address__social social">
+                    <span class="contact-address__name">Рейтинг сервиса</span>
+                    <ul class="social__list">
+                        <li class="social__items">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--insta" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#insta"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--faceb" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#faceb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--tikt" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#tikt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a class="social__link social__link--yout" href="#">
+                                <svg class="social__icon social__icon--yout" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#yout"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </address>
+    </div>
+    <div id="map-js"></div>
+</section>
     </main>    
     <footer class="footer">
-    <div class="container">
-      
-    </div>
+    <h2 class="visually-hidden">Подвал сайта</h2>
 </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&v=weekly" async></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map-js"), {
+                center: { lat: 47.023336411888586, lng: 28.82708344250857 },
+                zoom: 16,
+            });
+        }
+    </script>
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>

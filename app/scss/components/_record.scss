@@ -1,0 +1,77 @@
+.record {
+    margin-bottom: 110px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 48px 111px;
+        border: 1px solid #C7D1D7;
+        border-radius: 30px;
+        position: relative;
+    }
+    &__sale {
+        position: absolute;
+        padding: 0 19px;
+        background-color: #f4f9fc;
+        top: -56.5px;
+        left: 100px;
+        font-size: 113px;
+        line-height: 1;
+        color: $orange;
+        font-family: $BebasNeueBold;
+        text-shadow: 0 100px 80px rgba(255, 107, 0, 0.11), 0 46.233px 36.9864px rgba(255, 107, 0, 0.0815843), 0px 26.4535px 21.1628px rgba(255, 107, 0, 0.0689459), 0 16.0571px 12.8457px rgba(255, 107, 0, 0.0593943), 0px 9.67509px 7.74008px rgba(255, 107, 0, 0.0506057), 0 5.38772px 4.31018px rgba(255, 107, 0, 0.0410541), 0px 2.31722px 1.85378px rgba(255, 107, 0, 0.0284157);
+        &::after {
+            position: absolute;
+            content: '';
+            right: -5px;
+            top: -5px;
+            width: 24px;
+            height: 32px;
+            @include bg;
+            background-image: url(../images/fire.svg);
+        }
+    }
+    &__title {
+        max-width: 377px;
+        width: 100%;
+        font-size: 48px;
+        margin-right: 20px;
+        mark {
+            background-color: transparent;
+            color: $red;
+        }
+    }
+    &__form {
+        max-width: 525px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__input {
+        width: 49%;
+        height: 64px;
+        margin-bottom: 20px;
+        padding: 2px 20px;
+        border: 1px solid #dadada;
+        border-radius: 15px;
+        outline: transparent;
+        transition: border-color 0.3s ease-in;
+        &:focus {
+            border-color: #646464; 
+        }
+        &--tel {
+            width: 100%;
+        }
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            color: #646464;
+            font-family: $Montserrat;
+        }
+    }
+    &__btn {
+        padding: 18px 71px;
+    }
+}

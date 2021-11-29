@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function(){
             el: '.swiper-pagination',
             clickable: true
         },
-
         navigation: {
             nextEl: '.review__btn-next',
             prevEl: '.review__btn-prev',
@@ -27,12 +26,54 @@ document.addEventListener('DOMContentLoaded', function(){
             el: '.swiper-pagination',
             clickable: true
         },
-
         navigation: {
             nextEl: '.order__btn-next',
             prevEl: '.order__btn-prev',
         }
+    });
 
+    new Swiper('.repair-slider', {
+        wrapperClass: 'slider__wrapper',
+        slideClass: 'slider__slide',
+        slidesPerView: 4,
+        spaceBetween: 40,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.repair__btn-next',
+            prevEl: '.repair__btn-prev',
+        }
+    });
+
+    new Swiper('.work-slider', {
+        wrapperClass: 'work-slider__wrapper',
+        slideClass: 'work-slider__slide',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.work-slider__btn-next',
+            prevEl: '.work-slider__btn-prev',
+        }
+    });
+
+    new Swiper('.slides-contact__slider', {
+        wrapperClass: 'slides-contact__wrapper',
+        slideClass: 'slides-contact__slide',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.slides-contact__btn-next',
+            prevEl: '.slides-contact__btn-prev',
+        }
     });
 
     function getTimeRemaining(endtime) {

@@ -19,8 +19,24 @@
         @include('./components/review.html')
         @include('./components/order.html')
         @include('./components/service.html')
+        @include('./components/repair.html')
+        @include('./components/work.html')
+        @include('./components/record.html')
+        @include('./components/contact.html')
     </main>    
     @include('./components/footer.html')
+
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&v=weekly" async></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map-js"), {
+                center: { lat: 47.023336411888586, lng: 28.82708344250857 },
+                zoom: 16,
+            });
+        }
+    </script>
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>

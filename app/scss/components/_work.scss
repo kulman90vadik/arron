@@ -1,0 +1,75 @@
+.work {
+    margin-bottom: 115px;
+    &__blockquote {
+        margin: 0 auto 55px;
+        max-width: 700px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 24px;
+        font-family: $Montserrat;
+        position: relative;
+        text-align: center;
+        &::after,
+        &::before {
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            content: '';
+            @include bg;
+        }
+        &::after {
+            right: -20px;
+            bottom: -20px;
+            background-image: url(../images/quotation-bottom.png);
+        }
+        &::before {
+            top: -20px;
+            left: -20px;
+            background-image: url(../images/quotation-top.png);
+        }
+    }  
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        max-width: 470px;
+        position: relative;
+        width: 100%;
+        margin-right: 20px;
+        color: #646464;
+        font-weight: 400;
+        font-family: $Montserrat;
+        &::after, 
+        &::before {
+            position: absolute;
+            content: '';
+            @include bg;
+        }
+        &::after {
+            width: 98px;
+            height: 62px;
+            background-image: url(../images/wawe.svg);
+            left: -98px;
+            top: -120px;
+        }
+        &::before {
+            width: 88px;
+            height: 13px;
+            background-image: url(../images/arrow-decor.svg);
+            right: -88px;
+            top: 44px;
+        }
+    }
+    &__text {
+        @include lineClamp;
+        -webkit-line-clamp: 5;
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+}
+
+
