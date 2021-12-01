@@ -38,11 +38,6 @@ const svgSprites = () => {
 
 
 
-
-
-
-
-
 const htmlInclude = () => {
     return src(['app/html/*.html'])
     .pipe(fileInclude ({
@@ -78,8 +73,8 @@ function styles () {
 function scripts () {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.js',
         'node_modules/wow.js/dist/wow.js',
-        'node_modules/vivus/dist/vivus.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

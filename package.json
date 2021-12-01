@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://kulman90vadik.github.io/portfolio",
+  "homepage": "http://kulman90vadik.github.io/arron",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
+    "fancybox": "^3.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -29,7 +30,6 @@
     "gulp-cheerio": "^1.0.0",
     "gulp-replace": "^1.1.3",
     "jquery": "^3.6.0",
-    "vivus": "^0.4.6",
     "wow.js": "^1.2.2"
   }
 }

@@ -5,7 +5,7 @@
             <div class="home__content">
                 <h2 class="home__title title">Проблемы с Вашим устройством?</h2>
                 <p class="home__text text">Решаем любые проблемы! Большой склад и опытные мастера</p>
-                <a class="home__btn btn" type="button">Бесплатная консультация</a>
+                <button class="home__btn btn" type="button">Бесплатная консультация</button>
             </div>
             <div class="sale">
                 <div class="sale__number">50%</div>
@@ -34,5 +34,37 @@
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div class="advice-modal">
+        <div class="advice-modal__inner">
+            <form class="advice-modal__form" action="#">
+                <button class="advice-modal__exit" aria-label="Закрытие модального окна" type="button">
+                    <svg class="advice-modal__icon">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+                <h3 class="advice-modal__title title">Оставьте заявку на <mark>бесплатную</mark> консультацию</h3>
+                <label for="name" class="visually-hidden">текстовое поля для заполнения Вашего имени</label>
+                <input class="advice-modal__input" type="text" name="name" id="name" placeholder="Имя">
+                <label for="tel" class="visually-hidden">текстовое поля для заполнения Вашего телефона</label>
+                <input class="advice-modal__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+                <button class="btn advice-modal__btn" type="submit">Получить консультацию</button>
+            </form>
+
+
+            <div class="advice-modal__ready">
+                <button class="advice-modal__exit" aria-label="Закрытие модального окна" type="button">
+                    <svg class="advice-modal__icon">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+                <h2 class="title advice-modal__ready-title">Ваша заявка отправлена</h2>
+                <p class="advice-modal__text text">
+                    Мы свяжемся с вами в ближайшее время
+                </p>
+            </div>
+        </div>
+
     </div>
 </section>

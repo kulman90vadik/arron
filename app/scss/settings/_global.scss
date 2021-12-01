@@ -48,7 +48,7 @@ body {
 
 .title {
     font-size: 56px;
-    font-family: 700;
+    font-weight: 700;
     line-height: 1;
     font-family: $BebasNeueBold;
 }    
@@ -84,6 +84,3 @@ body {
         color: $grey;
     }
 }
-
-// @include lineClamp;
-// -webkit-line-clamp: 1;

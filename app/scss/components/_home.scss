@@ -4,14 +4,51 @@
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto;
-        height: 100vh;
+        min-height: 970px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include max($x) {
+            background-size: 55%;
+            min-height: 800px;
+        }
+        @include max($xl) {
+            background-size: 75%;
+            background-position: right top 90px;
+        }
+        @include max($lg) {
+            flex-direction: column;
+            justify-content: flex-end;
+            background-position: center top 85px;
+            background-size: 55%;
+            min-height: 1000px;
+            padding-bottom: 15px;
+        }
+        @include max($md) {
+            background-position: center top 64px;
+            background-size: 68%;
+        }
+        @include max($sm) {
+            min-height: 950px;
+        }
+        @include max($s) {
+            background-size: 107%;
+        }
     }
     &__content {
         max-width: 625px; 
         width: 100%;
+        @include max($xl) {
+            max-width: 445px; 
+        }
+        @include max($lg) {
+            max-width: 80%; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @include max($sm) {
+            max-width: 100%; 
+        }
     }
     &__title {
         font-size: 110px;
@@ -30,6 +67,21 @@
             height: 13px;
             top: 35px;
             right: 22px;
+            @include max($lg) {
+                display: none;
+            }
+        }
+        @include max($xl) {
+            font-size: 77px;
+        }
+        @include max($lg) {
+            font-size: 66px;
+        }
+        @include max($md) {
+            font-size: 55px;
+        }
+        @include max($s) {
+            font-size: 38px;
         }
     }
     &__text {
@@ -37,6 +89,13 @@
         max-width: 405px;
         width: 100%;
         margin-bottom: 40px;
+        @include max($lg) {
+            margin: 0 auto 15px;
+        }
+        @include max($sm) {
+            font-size: 19px;
+            max-width: 319px;
+        }
     }
     &::after,
     &::before {
@@ -50,6 +109,21 @@
         width: 50px;
         height: 50px;
         background-image: url(../images/ellipse-decor.svg);
+        @include max($lg) {
+            bottom: auto;
+            top: 50%;
+        }
+        @include max($md) {
+            top: 30%;
+            left: 20px;
+        }
+        @include max($sm) {
+            width: 29px;
+            height: 29px;
+        }
+        @include max($s) {
+            top: 14%;
+        }
     }
     &::before {
         width: 56px;
@@ -57,6 +131,26 @@
         right: 60px;
         bottom: 77px;
         background-image: url(../images/dots-decor.svg);
+        @include max($lg) {
+            bottom: auto;
+            top: 50%;
+        }
+        @include max($md) {
+            top: 30%;
+            right: 20px;
+        }
+        @include max($sm) {
+            width: 36px;
+            height: 36px;
+        }
+        @include max($s) {
+            top: 14%;
+        }
+    }
+    &__btn {
+        @include max($md) {
+            margin-bottom: 33px;
+        }
     }
 }
 
@@ -70,32 +164,45 @@
     background: #fff;
     box-shadow: 0 71px 80px rgba(255, 107, 0, 0.11), 0 21.4044px 24.1177px rgba(255, 107, 0, 0.0716748), 0px 8.8903px 10.0172px rgba(255, 107, 0, 0.055), 0 3.21545px 3.62304px rgba(255, 107, 0, 0.0383252);
     border-radius: 30px;
-    &::after {
-        position: absolute;
-        content: '';
-        width: 24px;
-        height: 32px;
-        @include bg;
-        background-image: url(../images/fire.svg);
-        right: 30px;
-        top: 15px;
-    }
     &__number {
         position: absolute;
         left: 30px;
         top: -40px;
         color: $orange;
         font-weight: 700;
-        font-size: 113.007px;
+        font-size: 113px;
         line-height: 113px;
         letter-spacing: -0.01em;
         font-family: $BebasNeueBold;
         text-shadow: 0 100px 80px rgba(255, 107, 0, 0.11), 0 46.233px 36.9864px rgba(255, 107, 0, 0.0815843), 0 26.4535px 21.1628px rgba(255, 107, 0, 0.0689459), 0 16.0571px 12.8457px rgba(255, 107, 0, 0.0593943), 0 9.67509px 7.74008px rgba(255, 107, 0, 0.0506057), 0 5.38772px 4.31018px rgba(255, 107, 0, 0.0410541), 0 2.31722px 1.85378px rgba(255, 107, 0, 0.0284157);
+        &::after {
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 32px;
+            @include bg;
+            background-image: url(../images/fire.svg);
+            right: -25px;
+            top: 6px;
+        }
+        @include max($lg) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @include max($md) {
+            left: 50%;
+            top: -40px;
+            transform: translate(-50%, 0);
+        }
     }
     &__text {
         font-weight: 400;
         font-size: 20px;
         margin-bottom: 44px;
+        @include max($lg) {
+            max-width: 330px;
+            margin-bottom: 10px;
+        }
         span {
             font-weight: 700;
         }
@@ -105,6 +212,19 @@
         display: block;
         color: rgba($black, 0.5);
     }
+    @include max($lg) {
+        max-width: 86%;
+        padding: 25px 25px 25px 240px;
+    }
+    @include max($md) {
+        max-width: 56%;
+        padding: 76px 25px 25px;
+    }
+    @include max($sm) {
+        max-width: 88%;
+        padding: 76px 20px 20px;
+    }
+
 }
 
 .clock-sale {
@@ -130,5 +250,8 @@
     &__smalltext {
         font-size: 11px;
         color: rgba($black, 0.5);
+    }
+    @include max($lg) {
+        max-width: 215px;
     }
 }

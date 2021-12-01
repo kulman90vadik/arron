@@ -1,5 +1,73 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+
+//  СКРОЛЛ HEADER
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function(){
+        if(window.scrollY >= 100) {
+            header.classList.add('header--active');
+        }
+        else {
+            header.classList.remove('header--active');
+        }
+    });
+
+// выезжающее меню
+    document.querySelector('.header__button').addEventListener('click', function(){
+        document.querySelector('.header__holder').classList.toggle('header__holder--active');
+        document.querySelector('.header').classList.toggle('header--height');
+        document.querySelectorAll('.header__button-item').forEach(item => {
+            item.classList.toggle('header__button-item--active');
+        });
+    });    
+
+// 
+
+//  МОДАЛЬНОЕ ОКНО ЗАПИСЬ НА БЕСПЛАТНОУЮ КОНСУЛЬТАЦИЮ    
+    const homeModal = document.querySelector('.advice-modal');
+    document.querySelector('.home__btn').addEventListener('click', function(){
+        homeModal.classList.add('advice-modal--active');
+    });
+    document.querySelectorAll('.advice-modal__exit').forEach(elem => {
+        elem.addEventListener('click', function(){
+            homeModal.classList.remove('advice-modal--active');
+            document.querySelector('.advice-modal__form').classList.remove('advice-modal__form--hidden');
+            document.querySelector('.advice-modal__ready').classList.remove('advice-modal__ready--active');
+            document.querySelectorAll('.advice-modal__input').forEach(input => {
+                input.value = '';
+                input.classList.remove('advice-modal__input--active');
+                input.classList.remove('advice-modal__input--green');
+            });
+        });    
+    });
+
+//  валидация
+    document.querySelectorAll('.advice-modal__input').forEach(input => {
+        input.addEventListener('change', function(){
+            input.classList.add('advice-modal__input--green');
+        });
+    });    
+// КНОПКА ЗАПИСИ, ОТПРАВКА ДАННЫХ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
+    document.querySelector('.advice-modal__btn').addEventListener('click', function(e){
+        e.preventDefault();
+        let n = 0;
+        document.querySelectorAll('.advice-modal__input').forEach(input => {
+            if(input.value == '') {
+                input.classList.add('advice-modal__input--active');
+            }
+            else {
+                n++;
+            }
+        });
+        
+        if(n == 2) {
+            document.querySelector('.advice-modal__form').classList.add('advice-modal__form--hidden');
+            document.querySelector('.advice-modal__ready').classList.add('advice-modal__ready--active');
+        }
+
+    });
+
+//  СЛАЙДЕРЫ 
     new Swiper('.review-slider', {
         wrapperClass: 'slider__wrapper',
         slideClass: 'slider__slide',
@@ -76,6 +144,10 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
+
+
+// ОБРАТНЫЙ ОТСЧЁТ     
+
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
@@ -112,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const timeinterval = setInterval(updateClock, 1000);
     }
     const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-    initializeClock('clock-sale', deadline);
+    initializeClock('clock-sale', deadline); 
 
 
 });
