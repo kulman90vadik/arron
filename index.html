@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arron</title>
+    <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body">
+    <header class="header">
+    <div class="container container--fluid">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <img class="logo__images" src="images/logo.svg" alt="логотип">
+            </a>
+            <button class="header__button" type="button">
+                <span class="header__button-item"></span>
+                <span class="header__button-item"></span>
+                <span class="header__button-item"></span>
+            </button>
+            <div class="header__holder">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Наши услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">О компании</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Отзывы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Выполненные заказы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__map">
+                    <div class="header__text">г. Кишинев, ул. Бэнулеску Бодони, д.33</div>
+                    <a class="header__link" href="#">Мы на карте</a>
+                </div>
+            </div>
+            <a class="header__tel header__tel--first" href="tel:069827738">069 82 77 38</a>
+            <a class="header__tel" href="tel:079927738">079 92 77 38</a>
+            <a class="header__tel-icon" href="#">
+                <svg class="header__icon" aria-label="Вызов по клику на иконку">
+                    <use xlink:href="images/sprite.svg#tel"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="home">
+    <h1 class="visually-hidden">Сервисный центр Arron по ремонту мобильных телефонов</h1>
+    <div class="container">
+        <div class="home__inner" style="background-image: url(images/master.png);">
+            <div class="home__content">
+                <h2 class="home__title title">Проблемы с Вашим устройством?</h2>
+                <p class="home__text text">Решаем любые проблемы! Большой склад и опытные мастера</p>
+                <button class="home__btn btn" type="button">Бесплатная консультация</button>
+            </div>
+            <div class="sale">
+                <div class="sale__number">50%</div>
+                <p class="sale__text">
+                    скидка на ремонт телефонов, ноутбуков и планшетов до
+                    <span>-50%</span>
+                </p>
+                <span class="sale__head">Конец акции:</span>
+                <ul class="clock-sale">
+                    <li class="clock-sale__item">
+                        <span class="clock-sale__time clock-sale__days"></span>
+                        <div class="clock-sale__smalltext">Days</div>
+                    </li>
+                    <li class="clock-sale__item">
+                        <span class="clock-sale__time clock-sale__hours"></span>
+                        <div class="clock-sale__smalltext">Hours</div>
+                    </li>
+                    <li class="clock-sale__item">
+                        <span class="clock-sale__time clock-sale__minutes"></span>
+                        <div class="clock-sale__smalltext">Minutes</div>
+                    </li>
+                    <li class="clock-sale__item">
+                        <span class="clock-sale__time clock-sale__seconds"></span>
+                        <div class="clock-sale__smalltext">Seconds</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="advice-modal">
+        <div class="advice-modal__inner">
+            <form class="advice-modal__form" action="#">
+                <button class="advice-modal__exit" aria-label="Закрытие модального окна" type="button">
+                    <svg class="advice-modal__icon">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+                <h3 class="advice-modal__title title">Оставьте заявку на <mark>бесплатную</mark> консультацию</h3>
+                <label for="name" class="visually-hidden">текстовое поля для заполнения Вашего имени</label>
+                <input class="advice-modal__input" type="text" name="name" id="name" placeholder="Имя">
+                <label for="tel" class="visually-hidden">текстовое поля для заполнения Вашего телефона</label>
+                <input class="advice-modal__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+                <button class="btn advice-modal__btn" type="submit">Получить консультацию</button>
+            </form>
+
+
+            <div class="advice-modal__ready">
+                <button class="advice-modal__exit" aria-label="Закрытие модального окна" type="button">
+                    <svg class="advice-modal__icon">
+                        <use xlink:href="images/sprite.svg#exit"></use>
+                    </svg>
+                </button>
+                <h2 class="title advice-modal__ready-title">Ваша заявка отправлена</h2>
+                <p class="advice-modal__text text">
+                    Мы свяжемся с вами в ближайшее время
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+        <section class="servises">
+    <h2 class="visually-hidden">Наши услуги</h2>
+    <div class="container">
+        <ul class="servises__list">
+            <li class="servises__item servises__item--courier">
+                <span class="servises__name">Курьер  по городу</span>
+                <p class="servises__text text">Выезд курьера Буюканы Чеканы, Рышкановка, центр, Ботаника.</p>
+            </li>
+            <li class="servises__item servises__item--tel">
+                <span class="servises__name">Подменный телефон -  Беслатно</span>
+                <p class="servises__text text">Телефон взамен Беслатно, пока ваш в ремонте</p>
+            </li>
+            <li class="servises__item servises__item--concern">
+                <span class="servises__name">Забота о вас</span>
+                <p class="servises__text text">Незначительные поломки - делаем бесплатно.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </main>    
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&v=weekly" async></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map-js"), {
+                center: { lat: 47.023336411888586, lng: 28.82708344250857 },
+                zoom: 16,
+            });
+        }
+    </script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
