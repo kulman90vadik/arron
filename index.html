@@ -16,7 +16,7 @@
             <a class="logo" href="#">
                 <img class="logo__images" src="images/logo.svg" alt="логотип">
             </a>
-            <button class="header__button" type="button">
+            <button class="header__button" type="button" aria-label="Выезжающее меню">
                 <span class="header__button-item"></span>
                 <span class="header__button-item"></span>
                 <span class="header__button-item"></span>
@@ -25,19 +25,19 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Наши услуги</a>
+                            <a class="menu__link" href="#service">Наши услуги</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">О компании</a>
+                            <a class="menu__link" href="#company">О компании</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Отзывы</a>
+                            <a class="menu__link" href="#reviews">Отзывы</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Выполненные заказы</a>
+                            <a class="menu__link" href="#orders">Выполненные заказы</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Контакты</a>
+                            <a class="menu__link" href="#contacts">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -62,9 +62,9 @@
     <div class="container">
         <div class="home__inner" style="background-image: url(images/master.png);">
             <div class="home__content">
-                <h2 class="home__title title">Проблемы с Вашим устройством?</h2>
-                <p class="home__text text">Решаем любые проблемы! Большой склад и опытные мастера</p>
-                <button class="home__btn btn" type="button">Бесплатная консультация</button>
+                <h2 class="home__title title wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">Проблемы с Вашим устройством?</h2>
+                <p class="home__text text wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2s">Решаем любые проблемы! Большой склад и опытные мастера</p>
+                <button class="home__btn btn wow animate__fadeInLeft" type="button" data-wow-duration="1s" data-wow-delay="2.5s">Бесплатная консультация</button>
             </div>
             <div class="sale">
                 <div class="sale__number">50%</div>
@@ -146,17 +146,420 @@
         </ul>
     </div>
 </section>
+        <section class="catalog" id="service">
+    <div class="container">
+        <div class="catalog__inner">
+            <h2 class="catalog__title title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="10">Мы работаем c устройствами:</h2>
+            <ul class="catalog__list">
+                <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                    <article class="card card--apple">
+                        <div class="card__block"></div>
+                        <img  class="card__images" src="images/apple.png" alt="apple">
+                        <div class="card__small">
+                            <img  class="card__images-small" src="images/apple-small.svg" alt="apple">
+                        </div>
+                        <span class="card__name">Apple</span>
+                        <a class="card__link" href="#">
+                            <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </article>
+                </li>
+
+                <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                    <article class="card card--android">
+                        <div class="card__block"></div>
+                        <img  class="card__images" src="images/android.png" alt="android">
+                        <div class="card__small">
+                            <img  class="card__images-small card__images-small-android" src="images/android-small.svg" alt="apple">
+                        </div>
+                        <span class="card__name">Android</span>
+                        <a class="card__link" href="#">
+                            <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="catalog__list catalog__list--bottom">
+            <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                <article class="card card--woth">
+                    <div class="card__block"></div>
+                    <img  class="card__images card__images--woth" src="images/woth.png" alt="woth">
+                    <span class="card__name">Гаджетами</span>
+                    <a class="card__link" href="#">
+                        <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                            <use xlink:href="images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </article>
+            </li>
+
+            <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                <article class="card card--comp">
+                    <div class="card__block"></div>
+                    <img  class="card__images card__images--comp" src="images/comp.png" alt="comp">
+                    <span class="card__name">Ноутбуками</span>
+                    <a class="card__link" href="#">
+                        <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                            <use xlink:href="images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </article>
+            </li>
+            <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                <article class="card card--pc">
+                    <div class="card__block"></div>
+                    <img  class="card__images card__images--pc" src="images/pc.png" alt="pc">
+                    <span class="card__name">Моноблоками и PC</span>
+                    <a class="card__link" href="#">
+                        <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                            <use xlink:href="images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </article>
+            </li>
+
+            <li class="catalog__item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="10">
+                <article class="card card--idr">
+                    <div class="card__block"></div>
+                    <img  class="card__images card__images--idr" src="images/idr.png" alt="idr">
+                    <span class="card__name">Другими устройствами</span>
+                    <a class="card__link" href="#">
+                        <svg class="card__icon" aria-label="Вызов по клику на иконку">
+                            <use xlink:href="images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </article>
+            </li>
+
+        </ul>
+    </div>
+</section>
+        <section class="about" id="company">
+    <div class="container">
+        <div class="about__inner">
+            <div class="about__left">
+                <h2 class="about__title title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="10">О компании Arron</h2>
+                <p class="about__text text">Узнайте о нашей компании больше из видео за 1 минуту.</p>
+                <button class="about__btn btn" type="button">Смотреть</button>
+            </div>
+            <div class="servises">
+                <ul class="servises__list">
+                    <li class="servises__item servises__item--courier">
+                        <span class="servises__name">Выезжаем в любую точку Кишинева</span>
+                        <p class="servises__text text">Выезд курьера Буюканы Чеканы, Рышкановка, центр, Ботаника.</p>
+                    </li>
+                    <li class="servises__item servises__item--work">
+                        <span class="servises__name">Работы от 30 минут</span>
+                        <p class="servises__text text">Время работы или настройки занимает
+                            от 30 минут до несколько часов.</p>
+                    </li>
+                    <li class="servises__item servises__item--card">
+                        <span class="servises__name">Удобный способ оплаты</span>
+                        <p class="servises__text text">Незначительные поломки - делаем бесплатно.</p>
+                    </li>
+                    <li class="servises__item servises__item--warranty">
+                        <span class="servises__name">Гарантия на все выполненые услуги</span>
+                        <p class="servises__text text">Запчасти, фотографии и сообщения под Вашим контролем. После работ инженер отдаст Вам старые запчасти.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="review" id="reviews">
+    <div class="container">
+        <div class="review__head">
+            <h2 class="title review__title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="10">Отзывы счастливых клиентов</h2>
+            <div class="buttons">
+                <button class="buttons__btn review__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn review__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="slider review-slider">
+            <ul class="slider__wrapper">
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/review-1.png" alt="Фото автора отзыва">
+                    <button class="slider__btn" type="button" aria-label="Запуск видео отзыва"></button>
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/review-2.png" alt="Фото автора отзыва">
+                    <button class="slider__btn" type="button" aria-label="Запуск видео отзыва"></button>
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/review-3.png" alt="Фото автора отзыва">
+                    <button class="slider__btn" type="button" aria-label="Запуск видео отзыва"></button>
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/review-4.png" alt="Фото автора отзыва">
+                    <button class="slider__btn" type="button" aria-label="Запуск видео отзыва"></button>
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/review-2.png" alt="Фото автора отзыва">
+                    <button class="slider__btn" type="button" aria-label="Запуск видео отзыва"></button>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+
+        <section class="order" id="orders">
+    <div class="container">
+        <div class="order__head">
+            <h2 class="title order__title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="10">Выполненные заказы</h2>
+            <div class="buttons">
+                <button class="buttons__btn order__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn order__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="slider order-slider">
+            <ul class="slider__wrapper">
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/order-1.png" alt="Фото выполненого заказа">
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/order-2.png" alt="Фото выполненого заказа">
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/order-3.png" alt="Фото выполненого заказа">
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/order-1.png" alt="Фото выполненого заказа">
+                </li>
+                <li class="slider__slide">
+                    <img class="slider__images" src="images/order-2.png" alt="Фото выполненого заказа">
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+
+        <section class="service">
+    <div class="container">
+        <div class="service__inner">
+            <div class="service__left animate__fadeInLeftBig wow" data-wow-duration="1s" data-wow-offset="10">
+                <h2 class="title service__title">Что делать если ноутбук или телефон медлено работает</h2>
+                <p class="service__text text">Получите чек лист - Что делать, если ноутбук или телефон грузится</p>
+                <button class="service__btn btn" type="button">Получить чек лист</button>
+            </div>
+            <div class="service__right">
+                <div class="service__holder">
+                    <h3 class="title service__subtitle">наши услуги</h3>
+                    <ul class="service__list">
+                        <li class="service__item">ремонт ноутбуков</li>
+                        <li class="service__item">ремонт смартфонов</li>
+                        <li class="service__item">заправка и ремонт картриджей</li>
+                        <li class="service__item">установка СНПЧ</li>
+                        <li class="service__item">ремонт компьютеров</li>
+                        <li class="service__item">ремонт моноблоков</li>
+                    </ul>
+                </div>
+                <ul class="service__list">
+                    <li class="service__item">ремонт планшетов</li>
+                    <li class="service__item">ремонт КПК</li>
+                    <li class="service__item">ремонт мониторов</li>
+                    <li class="service__item">ремонт принтеров</li>
+                    <li class="service__item">ремонт роутеров</li>
+                    <li class="service__item">восстановление жестких дисков</li>
+                    <li class="service__item">компьютерная помощь и IT аутсорсинги др.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
         
+        <div class="work">
+    <div class="container">
+        <blockquote class="work__blockquote">
+            В нашей компании работают лучшие специалисты, которые прекрасно разбираются в современных технологиях и имеют более 3-х лет опыта работы.
+        </blockquote>
+        <div class="work__inner">
+            <div class="work__info">
+                <p class="work__text text">
+                    За счет этого мы гарантируем устранение любых неполадок и предоставляем гарантию на все выполненные работы.
+                </p>
+                <p class="work__text text">
+                    Мы поможем не только восстановить работоспособность техники, но и подскажем, как избежать возникновения подобных поломок в будущем.
+                </p>
+                <p class="work__text text">
+                    Квалифицированная консультация специалиста поможет безопасно пользоваться компьютером. В нашем штате работают опытные специалисты.
+                </p>
+            </div>
+            <div class="slides">
+                <div class="work-slider">
+                    <ul class="work-slider__wrapper">
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="work-slider__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class="buttons__btn work-slider__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn work-slider__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+        <section class="record">
+    <div class="container">
+        <div class="record__inner">
+            <h2 class="record__title title">Записаться на диагностику 
+                в <mark>удобное</mark> вам время</h2>
+            <form class="record__form" action="#">
+                <label class="visually-hidden" for="day">Текстовое поле для ввода дня</label>
+                <input class="record__input" type="text" name="day" id="day" placeholder="День">
+                <label class="visually-hidden" for="time">Текстовое поле для ввода время</label>
+                <input class="record__input" type="text" name="time" id="time" placeholder="Время">
+                <label class="visually-hidden" for="tel">Текстовое поле для ввода дня</label>
+                <input class="record__input record__input--tel" type="tel" name="tel" id="tel" placeholder="Телефон">
+                <button class="record__btn btn" type="submit">Записаться</button>
+            </form>
+            <div class="record__sale">50%</div>    
+        </div>
+    </div>
+</section>
+        <section class="contact" id="contacts">
+    <div class="container">
+        <h2 class="contact__title title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="10" >Наши контакты</h2>
+        <div class="contact__inner">
+            <div class="slides-contact">
+                <div class="slides-contact__slider">
+                    <ul class="slides-contact__wrapper">
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                        <li class="slides-contact__slide" style="background-image: url(images/work-slider-1.jpg);"></li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class="buttons__btn slides-contact__btn-prev" type="button">
+                    <svg class="buttons__icon buttons__icon--rotate">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="buttons__btn slides-contact__btn-next" type="button">
+                    <svg class="buttons__icon">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+            <a class="contact__popup" style="background-image: url(images/popup.jpg);">
+                <button class="contact__btn" type="button" aria-label="Запуск видео отзыва"></button>
+            </a>
+        </div>
         
-        
-        
-        
-        
-        
-        
-        
+        <address class="contact-address">
+            <ul class="contact-address__top">
+                <li class="contact-address__item contact-address__item--tel">
+                    <a class="contact-address__link" href="tel:069827738">069 82 77 38</a> /  
+                    <a class="contact-address__link" href="tel:079927738">079 92 77 38</a>
+                </li>
+                <li class="contact-address__item contact-address__item--email">
+                    <a class="contact-address__link" href="mailto:info@arron.md">info@arron.md</a>
+                </li>
+                <li class="contact-address__item contact-address__item--map">
+                    <a class="contact-address__link" href="#">г. Кишинев, ул. Бэнулеску Бодони, д.33</a>
+                </li>
+            </ul>
+            <div class="contact-address__bottom">
+                <div class="contact-address__rating">
+                    <span class="contact-address__name">Рейтинг сервиса</span>
+                    <div class="rating">
+                        <div class="rating__item">
+                            <input class="rating__input" type="radio" value="5" name="rating" id="rating-5">
+                            <label class="rating__label" for="rating-5"></label>
+                            <input class="rating__input" type="radio" value="4" name="rating" id="rating-4" checked>
+                            <label class="rating__label" for="rating-4"></label>
+                            <input class="rating__input" type="radio" value="3" name="rating" id="rating-3">
+                            <label class="rating__label" for="rating-3"></label>
+                            <input class="rating__input" type="radio" value="2" name="rating" id="rating-2">
+                            <label class="rating__label" for="rating-2"></label>
+                            <input class="rating__input" type="radio" value="1" name="rating" id="rating-1">
+                            <label class="rating__label" for="rating-1"></label>
+                        </div>
+                    </div>
+                    <span class="rating__descr">4/5.0 - 403 голоса</span>
+                </div>
+                <div class="contact-address__social social">
+                    <span class="contact-address__name">Рейтинг сервиса</span>
+                    <ul class="social__list">
+                        <li class="social__items wow animate__bounce" data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--insta" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#insta"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items wow animate__bounce" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--faceb" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#faceb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items wow animate__bounce" data-wow-duration="1s" data-wow-delay="2s">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon social__icon--tikt" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#tikt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__items wow animate__bounce" data-wow-duration="1s" data-wow-delay="2.5s">
+                            <a class="social__link social__link--yout" href="#">
+                                <svg class="social__icon social__icon--yout" aria-label="Переход на страницу в инстаграм">
+                                    <use xlink:href="images/sprite.svg#yout"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </address>
+    </div>
+    <div id="map-js"></div>
+</section>
     </main>    
-    
+    <footer class="footer">
+    <h2 class="visually-hidden">Подвал сайта</h2>
+</footer>
 
     <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&v=weekly" async></script>
     <script>
