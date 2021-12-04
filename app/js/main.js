@@ -259,4 +259,6 @@ document.addEventListener('DOMContentLoaded', function(){
     initializeClock('clock-sale', deadline); 
 
 
+    new WOW().init();
+
 });

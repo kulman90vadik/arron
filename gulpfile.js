@@ -73,7 +73,6 @@ function styles () {
 function scripts () {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/fancybox/dist/js/jquery.fancybox.js',
         'node_modules/wow.js/dist/wow.js',
         'app/js/main.js'
     ])
