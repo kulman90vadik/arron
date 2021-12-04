@@ -5,24 +5,82 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 100px;
+        @include max($xl) {
+            justify-content: center;
+        }
+        @include max($lg) {
+            flex-direction: column;
+            margin-bottom: 70px;
+        }
+        @include max($md) {
+            margin-bottom: 30px;
+        }
     }
     &__title {
         max-width: 450px;
         width: 100%;
         font-size: 80px;
         margin-right: 50px;
+        @include max($xl) {
+            max-width: 350px;
+            font-size: 60px;
+            margin-right: 27px;
+        }
+        @include max($lg) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 55px;
+        }
+        @include max($md) {
+            font-size: 49px;
+        }
+        @include max($sm) {
+            font-size: 38px;
+        }
     }
     &__list {
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            max-width: 600px;
+            width: 100%;
+        }
+        @include max($md) {
+            max-width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &--bottom {
+            @include max($xl) {
+                max-width: 600px;
+                width: 100%;
+                flex-wrap: wrap;
+                margin: 0 auto;
+            }
+            @include max($md) {
+                max-width: 100%;
+                justify-content: center;
+            }
+            .card {
+                @include max($xl) {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+    @include max($xl) {
+        margin-bottom: 40px;
     }
 }
 
 
 .card {
     position: relative;
-    width: 302px;
-    height: 310px;
+    width: 290px;
+    height: 305px;
+    @include max($md) {
+        margin-bottom: 70px;
+    }
     &:hover .card__icon{
         stroke: #fff;
     }

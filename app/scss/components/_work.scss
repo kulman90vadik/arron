@@ -21,11 +21,37 @@
             right: -20px;
             bottom: -20px;
             background-image: url(../images/quotation-bottom.png);
+            @include max($lg) {
+                right: -27px;
+                bottom: 5px;
+            }
+            @include max($sm) {
+                right: 3px;
+            }
         }
         &::before {
             top: -20px;
             left: -20px;
             background-image: url(../images/quotation-top.png);
+            @include max($lg) {
+                left: -27px;
+                top: 5px;
+            }
+            @include max($sm) {
+                left: 3px;
+            }
+        }
+        @include max($lg) {
+            margin: 0 auto 22px;
+            font-size: 19px;
+            max-width: 460px;
+        }
+        @include max($sm) {
+            font-size: 18px;
+            padding: 0 27px;
+        }
+        @include max($s) {
+            font-size: 16px;
         }
     }  
 
@@ -33,6 +59,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-right: 25px;
+        @include max($lg) {
+            flex-direction: column;
+            padding-right: 0;
+        }
     }
     &__info {
         max-width: 470px;
@@ -42,11 +73,19 @@
         color: #646464;
         font-weight: 400;
         font-family: $Montserrat;
+        @include max($lg) {
+            margin-bottom: 20px;
+            margin-right: 0;
+            max-width: 100%;
+        }
         &::after, 
         &::before {
             position: absolute;
             content: '';
             @include bg;
+            @include max($xl) {
+                display: none;
+            }
         }
         &::after {
             width: 98px;
@@ -65,10 +104,44 @@
     }
     &__text {
         @include lineClamp;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         &:not(:last-child) {
             margin-bottom: 22px;
+            @include max($lg) {
+                margin-bottom: 5px;
+            }
         }
+    }
+    .slides {
+        @include max($xl) {
+            max-width: 450px;
+        }
+        @include max($lg) {
+            max-width: 400px;
+        }
+        @include max($sm) {
+            max-width: 325px;
+        }
+        .work-slider {
+            @include max($xl) {
+                height: 410px;
+            }
+            @include max($lg) {
+                height: 350px;
+            }
+            @include max($sm) {
+                height: 300px;
+            }
+            &__btn-prev,
+            &__btn-next {
+                @include max($s) {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include max($lg) {
+        margin-bottom: 80px;
     }
 }
 

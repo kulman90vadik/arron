@@ -6,12 +6,30 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
+        @include max($lg) {
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        @include max($xl) {
+            font-size: 60px;
+        }
+        @include max($lg) {
+            font-size: 50px;
+        }
+        @include max($md) {
+            font-size: 39px;
+        }
+        @include max($sm) {
+            font-size: 30px;
+        }
     }
     &::after, 
     &::before {
         position: absolute;
         content: '';
         @include bg;
+        z-index: -1;
     }
     &::after {
         background-image: url(../images/dots-decor.svg);
@@ -27,7 +45,9 @@
         bottom: 133px;
         left: 74px;
     }
-
+    @include max($xl) {
+        margin-bottom: 25px;
+    }
 }
 
 
@@ -190,5 +210,8 @@
                 }
             }
         }
+    }
+    @include max($xl) {
+        padding-bottom: 70px;
     }
 }

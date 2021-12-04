@@ -5,14 +5,23 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 110px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }
     }
     &__buttons {
         margin-bottom: -110px;
+        @include max($xl) {
+            margin-bottom: -60px;
+        }
     }
     &__title {
         font-size: 80px;
         max-width: 966px;
         width: 100%;
+        @include max($xl) {
+            font-size: 55px;
+        }
     }
     & .repair-slider {
         padding-top: 70px;

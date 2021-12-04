@@ -4,11 +4,27 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include max($md) {
+            flex-direction: column;
+        }
     }
     &__left {
         max-width: 340px;
         width: 100%;
         margin-right: 25px;
+        @include max($xl) {
+            max-width: 300px;
+        }
+        @include max($lg) {
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+        @include max($md) {
+            flex-shrink: auto;
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
     }
     &__title {
         font-size: 80px;
@@ -23,11 +39,27 @@
             height: 13px;
             bottom: 40px;
             right: 22px;
+            @include max($md) {
+                display: none;
+            }
+        }
+        @include max($xl) {
+            font-size: 60px;
+        }
+        @include max($md) {
+            font-size: 49px;
+            margin-bottom: 0;
+        }
+        @include max($sm) {
+            font-size: 38px;
         }
     }
     &__text {
         font-size: 24px;
         margin-bottom: 64px;
+        @include max($md) {
+            margin-bottom: 16px;
+        }
     }
     &__btn {
         padding: 18px 70px 18px 30px;
@@ -52,11 +84,20 @@
 
     & .servises {
         margin-bottom: 0;
+        @include max($md) {
+            max-width: 100%;
+        }
     }
     & .servises__list {
         max-width: 800px;
         width: 100%;
         flex-wrap: wrap;
+        @include max($xl) {
+            max-width: 620px;
+        }
+        @include max($lg) {
+            max-width: 100%;
+        }
     }
     & .servises__item:not(:last-child) {
         margin-right: 0;
@@ -64,16 +105,55 @@
     & .servises__item--courier,
     & .servises__item--work {
         margin-bottom: 55px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }
+        @include max($lg) {
+            margin-bottom: 0;
+        }
     }
-
+    & .servises__name {
+        @include max($lg) {
+            margin-bottom: 0;
+        }
+    }
+    & .servises__item {
+        @include max($xl) {
+            max-width: 300px;
+            padding-top: 80px;
+            width: 100%;
+        }
+        @include max($lg) {
+            max-width: 100%;
+        }
+        @include max($md) {
+            padding-top: 0;
+            padding-left: 66px;
+            margin-bottom: 11px;
+        }
+    }
     &::after {
         position: absolute;
         content: '';
         @include bg;
         width: 98px;
         height: 62px;
-        bottom: 65px;
+        bottom: 190px;
+        z-index: -1;
         right: 65px;
         background-image: url(../images/wawe.svg);
+        @include max($md) {
+            bottom: auto;
+            top: 112px;
+            right: 22px;
+            width: 59px;
+            height: 38px;
+        }
+    }
+    @include max($xl) {
+        margin-bottom: 50px;
+    }
+    @include max($md) {
+        margin-bottom: 30px;
     }
 }

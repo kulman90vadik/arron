@@ -4,15 +4,43 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 100px;
+        @include max($xl) {
+            margin-bottom: 50px;
+        }
+        @include max($sm) {
+            flex-direction: column;
+        }
     }
     &__title {
         margin-bottom: 10px;
+        @include max($lg) {
+            margin-bottom: 0;
+            font-size: 39px;
+        }
+        @include max($sm) {
+            font-size: 30px;
+        }
     }
     & .slides-contact {
         position: relative;
         max-width: 596px;
         margin-right: 40px;
         width: 100%;
+        @include max($xl) {
+            max-width: 500px;
+            margin-right: 20px;
+        }
+        @include max($lg) {
+            max-width: 340px;
+        }
+        @include max($md) {
+            max-width: 260px;
+        }
+        @include max($sm) {
+            max-width: 410px;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
         & .slides-contact__btn-prev,
         & .slides-contact__btn-next {
             z-index: 55;
@@ -20,12 +48,27 @@
             top: 50%;
             transform: translateY(-50%);
             margin-right: 0;
+            @include max($xl) {
+                top: auto;
+                transform: none;
+                bottom: 40px;
+            }
+            @include max($sm) {
+                bottom: 55px;
+            }
         }
         & .slides-contact__btn-prev {
             left: -24px;
+            @include max($xl) {
+                right: 70px;
+                left: auto;
+            }
         }
         & .slides-contact__btn-next {
             right: -24px;
+            @include max($xl) {
+                right: 10px;
+            }
         }
         &__slider {
             overflow: hidden;
@@ -33,6 +76,22 @@
             padding: 30px 0;
             width: 100%;
             height: 637px;
+            @include max($xl) {
+                height: 530px;
+            }
+            @include max($lg) {
+                height: 400px;
+            }
+            @include max($md) {
+                height: 270px;
+            }
+            @include max($sm) {
+                height: 333px;
+                margin-bottom: 20px;
+            }
+            @include max($s) {
+                height: 300px;
+            }
         }    
         &__wrapper {
             height: 100%;
@@ -95,6 +154,15 @@
         height: 577px;
         @include bg;
         border-radius: 10px;
+        @include max($xl) {
+            height: 470px;
+        }
+        @include max($lg) {
+            height: 340px;
+        }
+        @include max($md) {
+            height: 270px;
+        }
     }
     
     &__btn {
@@ -152,6 +220,15 @@
     #map-js {
         height: 600px;
         width: 100%;
+        @include max($xl) {
+            height: 400px;
+        }
+        @include max($lg) {
+            height: 350px;
+        }
+        @include max($md) {
+            height: 300px;
+        }
     }
 
 }

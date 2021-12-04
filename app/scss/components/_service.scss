@@ -3,12 +3,21 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            flex-direction: column;
+        }
     }
     &__title {
         margin-bottom: 5px;
         font-size: 48px;
         @include lineClamp;
         -webkit-line-clamp: 3;
+        @include max($xl) {
+            font-size: 38px;
+        }
+        @include max($sm) {
+            font-size: 30px;
+        }
     }
     &__text {
         position: relative;
@@ -28,24 +37,49 @@
             height: 45px;
             top: 2px;
         }
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
     }
     &__left {
         margin-right: 22px;
         max-width: 430px;
         width: 100%;
+        @include max($xl) {
+            max-width: 320px;
+        }
+        @include max($lg) {
+            max-width: 100%;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
     }
     &__right {
         max-width: 670px;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @include max($sm) {
+            flex-direction: column;
+        }
     }
     &__holder {
         margin-right: 11px;
+        @include max($sm) {
+            margin-right: 0;
+            margin-bottom: 6px;
+        }
     }
     &__subtitle {
         font-size: 48px;
         margin-bottom: 20px;
+        @include max($xl) {
+            font-size: 38px;
+        }
+        @include max($lg) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }    
     }
     &__item {
         position: relative;
@@ -57,6 +91,9 @@
         padding-left: 22px;
         &:not(:last-child) {
             margin-bottom: 18px;
+            @include max($lg) {
+                margin-bottom: 6px;
+            }
         }
         &::after {
             position: absolute;
@@ -68,5 +105,8 @@
             left: 0;
             top: 6px;
         }
+    }
+    @include max($xl) {
+        margin-bottom: 50px;
     }
 }

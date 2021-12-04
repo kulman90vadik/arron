@@ -57,7 +57,7 @@ body {
     font-weight: 400;
     color: $grey;
     @include lineClamp;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
 }
 
 .btn {
