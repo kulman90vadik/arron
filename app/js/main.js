@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
     for(let item of links) {
         item.addEventListener('click', function (e) {
             e.preventDefault();
+            document.body.classList.remove('disable-scroll');
             document.querySelector('.header__holder').classList.remove('header__holder--active');
             document.querySelector('.header').classList.remove('header--height');
             document.querySelectorAll('.header__button-item').forEach(el => {
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // выезжающее меню
     document.querySelector('.header__button').addEventListener('click', function(){
+        document.body.classList.toggle('disable-scroll');
         document.querySelector('.header__holder').classList.toggle('header__holder--active');
         document.querySelector('.header').classList.toggle('header--height');
         document.querySelectorAll('.header__button-item').forEach(item => {
