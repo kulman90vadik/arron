@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
+// 100vh на мобильном разрешении.
+    const heightVh = () => {
+        console.log('ercccce');
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh + 'px');
+    } 
+    heightVh();
+    
+    window.addEventListener('resize', () => {
+        heightVh();
+    });
 
 //  скролл по блокам
-    // const anchors = document.querySelectorAll('a[href*="#"]')
     const links = document.querySelectorAll('.menu__link');
 
     for(let item of links) {
@@ -46,10 +56,12 @@ document.addEventListener('DOMContentLoaded', function(){
     const homeModal = document.querySelector('.advice-modal');
     document.querySelector('.home__btn').addEventListener('click', function(){
         homeModal.classList.add('advice-modal--active');
+        document.body.classList.add('disable-scroll');
     });
     document.querySelectorAll('.advice-modal__exit').forEach(elem => {
         elem.addEventListener('click', function(){
             homeModal.classList.remove('advice-modal--active');
+            document.body.classList.remove('disable-scroll');
             document.querySelector('.advice-modal__form').classList.remove('advice-modal__form--hidden');
             document.querySelector('.advice-modal__ready').classList.remove('advice-modal__ready--active');
             document.querySelectorAll('.advice-modal__input').forEach(input => {
@@ -154,39 +166,39 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
-    new Swiper('.repair-slider', {
-        wrapperClass: 'slider__wrapper',
-        slideClass: 'slider__slide',
-        slidesPerView: 1,
-        // spaceBetween: 40,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        navigation: {
-            nextEl: '.repair__btn-next',
-            prevEl: '.repair__btn-prev',
-        },
-        breakpoints: {
-            // 335: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20,
-            // },
-            // 720: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 10
-            // },
-            // 1070: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 30
-            // },
-            // 1280: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 30
-            // }
-        }
-    });
+    // new Swiper('.repair-slider', {
+    //     wrapperClass: 'slider__wrapper',
+    //     slideClass: 'slider__slide',
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    //     loop: true,
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true
+    //     },
+    //     navigation: {
+    //         nextEl: '.repair__btn-next',
+    //         prevEl: '.repair__btn-prev',
+    //     },
+    //     breakpoints: {
+    //         // 335: {
+    //         //     slidesPerView: 1,
+    //         //     spaceBetween: 0,
+    //         // },
+    //         540: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 50
+    //         },
+    //         // 1070: {
+    //         //     slidesPerView: 3,
+    //         //     spaceBetween: 30
+    //         // },
+    //         // 1280: {
+    //         //     slidesPerView: 3,
+    //         //     spaceBetween: 30
+    //         // }
+    //     }
+    // });
 
     new Swiper('.work-slider', {
         wrapperClass: 'work-slider__wrapper',

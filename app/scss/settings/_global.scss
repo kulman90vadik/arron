@@ -85,9 +85,12 @@ body {
     }
 }
 
-// wow animate__lightSpeedInLeft
-
-
-// data-wow-duration="1s" data-wow-offset="10" 
-
-// <h2 class="catalog__title title " >Мы работаем c устройствами:</h2>
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}

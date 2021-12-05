@@ -18,7 +18,8 @@
         transition: box-shadow 0.3s ease-in, padding 0.3s ease-in;
     }
     &--height {
-        height: 100vh;
+        // height: 100vh;
+        height: calc(var(--vh) * 100);
         background-color: rgba(#fff, 0.9);
     }
     &__inner {
@@ -58,6 +59,7 @@
         &--active {
             transform: translateX(0);
             transition: transform 0.4s ease-in-out;
+            height: calc(var(--vh) * 100);
         }
     }
     &__button {

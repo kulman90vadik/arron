@@ -1,36 +1,57 @@
-.repair  {
-    margin-bottom: 110px;
-    &__head {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 110px;
-        @include max($xl) {
-            margin-bottom: 25px;
-        }
-    }
-    &__buttons {
-        margin-bottom: -110px;
-        @include max($xl) {
-            margin-bottom: -60px;
-        }
-    }
-    &__title {
-        font-size: 80px;
-        max-width: 966px;
-        width: 100%;
-        @include max($xl) {
-            font-size: 55px;
-        }
-    }
-    & .repair-slider {
-        padding-top: 70px;
-        padding-bottom: 145px;
-    }
-    & .swiper-pagination {
-        bottom: 10px;
-    }
-    & .card__name {
-        left: 55px;
-    }
-}
+// .repair  {
+//     margin-bottom: 110px;
+//     &__head {
+//         display: flex;
+//         align-items: flex-end;
+//         justify-content: space-between;
+//         margin-bottom: 110px;
+//         @include max($xl) {
+//             margin-bottom: 25px;
+//         }
+//     }
+//     &__buttons {
+//         margin-bottom: -110px;
+//         @include max($xl) {
+//             margin-bottom: -3px;
+//         }
+//         @include max($md) {
+//             margin-bottom: -30px;
+//         }
+//     }
+//     &__title {
+//         font-size: 80px;
+//         max-width: 966px;
+//         width: 100%;
+//         @include max($xl) {
+//             font-size: 40px;
+//         }
+//         @include max($md) {
+//             font-size: 30px;
+//         }
+//         @include max($s) {
+//             font-size: 27px;
+//         }
+//     }
+//     & .repair-slider {
+//         padding-top: 70px;
+//         padding-bottom: 145px;
+//     }
+//     & .swiper-pagination {
+//         bottom: 10px;
+//     }
+//     & .card__name {
+//         left: 55px;
+//     }
+//     & .slider__slide {
+//         @include max($md) {
+//             max-width: 250px;
+//         }
+//         @include max($sm) {
+//             max-width: 450px;
+//             margin-left: 33px;
+//         }
+//         @include max($s) {
+//             margin-left: 0;
+//         }
+//     }
+// }
